@@ -18,8 +18,11 @@
 # print(are_anagrams(str1_3, str2_3))  # False
 
 
-def are_anagrams(str_1, str_2):
-    pass  # вместо pass - напишите свое решение
+def are_anagrams(str_1: str, str_2: str) -> bool:
+    lst1 = sorted(list(str_1))
+    lst2 = sorted(list(str_2))
+
+    return lst1 == lst2
 
 
 if __name__ == "__main__":

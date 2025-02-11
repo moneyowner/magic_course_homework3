@@ -23,9 +23,15 @@
 # print(check_companies_profit(companies2))  # True
 
 
-def check_companies_profit(companies):
-    pass  # вместо pass - напишите свое решение
-
+def check_companies_profit(companies: dict[str, list[int]]) -> bool:
+    for values in companies.values():
+        if sum(values) < 0:
+            return False
+    return True
+"""
+Функция, которая считает прибыль или убыток компании. На вход подаем словарь с названием компании
+в качестве ключа и списком с доходами и расходами (3-10 чисел)
+"""
 
 if __name__ == "__main__":
     companies = {

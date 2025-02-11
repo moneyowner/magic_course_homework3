@@ -13,8 +13,11 @@
 # {'a': 3, 'b': 3, 'c': 1}
 
 
-def count_frequencies(lst):
-    pass  # вместо pass - напишите свое решение
+def count_frequencies(lst: list) -> dict[any, int]:
+    freq_dict = {}
+    for elem in lst:
+        freq_dict[elem] = freq_dict.get(elem, 0) + 1
+    return freq_dict
 
 
 if __name__ == "__main__":
